@@ -158,15 +158,4 @@ def print_nice_result(res):
     print_5(_pets)
 
 
-if __name__ == '__main__':
-    einstein_problem = define_problem()
-    logging.info(f"____________EINSTEIN____________")
-    solver = CSPSolver(
-        problem=einstein_problem,
-        algorithm_type=AC3,
-        variable_selector=DegreeVariableSelector,
-        value_selector=LeastConstrainingValueSelector,
-        use_ac3=True
-    )
-    result = solver.get_solution()
-    print_nice_result(result)
+
